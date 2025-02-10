@@ -1,4 +1,5 @@
 const qa1 = './test/specs/visit.spec.js'
+const qa2  = './test/specs/addcart.spec.js'
 
 
 exports.config = {
@@ -23,7 +24,7 @@ exports.config = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
-    specs: [ qa1
+    specs: [ qa2
         // './test/specs/**/*.js'
     ],
     // Patterns to exclude.
