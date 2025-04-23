@@ -2,46 +2,91 @@
 
 This project is a test automation framework built using **WebdriverIO** and **JavaScript** for automating the Evershop web application. It includes end-to-end test scenarios to ensure the quality and stability of key e-commerce functionalities.
 
-## 🚀 Features
+## Prerequisites
+Before setting up the project, ensure you have the following installed:
 
-- ✅ End-to-end automation for Evershop
-- 🔧 Built using WebdriverIO (v7+)
-- 📊 Supports test reports (Allure)
-- ⛓ Integrated with ChromeDriver
-- 🧪 Includes sample test scenarios
+- **Node.js** v22.12.0
+- **npm** v10.9.0
+- **Google Chrome** (latest version)
+- **Allure Commandline** (optional, for generating test reports)
 
-## 🛠️ Technologies Used
+### Verify Installations
+Run the following commands to check if the required dependencies are installed:
 
-- [WebdriverIO](https://webdriver.io/)
-- JavaScript (Node.js)
-- Mocha / Chai
-- Allure Reporter
-- ChromeDriver
+```sh
+node -v   # Verify Node.js version
+npm -v    # Verify npm version
+```
 
-## 📁 Folder Structure
+## Installation & Setup
 
-
-## ✅ Getting Started
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- Chrome browser installed
-
-### Installation
-
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/your-username/evershop-automation.git
-cd evershop-automation
+### 1. Install Dependencies
+```sh
 npm install
+```
 
-### Run Tests
-To run all tests:
-npx wdio run wdio.conf.js
+### 2. Configure WebDriverIO
+Modify `wdio.conf.js` as needed for your test setup. Ensure browser capabilities are correctly defined:
 
+```js
+capabilities: [
+  {
+    browserName: "chrome",
+    "goog:chromeOptions": {
+      args: ["--disable-extensions"],
+    },
+  },
+],
+```
 
-### To generate Allure report:
+## Running Tests
 
-allure generate allure-results --clean && allure open
+### Run All Tests
+```sh
+npm run test
+```
+
+### Run a Specific Test File
+```sh
+npx wdio wdio.conf.js --spec ./test/specs/testq1.spec.js
+```
+
+## Generating and Viewing Allure Report
+
+### 1. Generate the Report
+```sh
+npm run getreport
+```
+
+### 2. Open the Report
+```sh
+allure serve allure-results
+```
+
+## Troubleshooting
+
+### 1. WebDriverIO Command Not Recognized?
+Run WebDriverIO using `npx`:
+```sh
+npx wdio wdio.conf.js
+```
+
+### 2. Allure Command Not Found?
+Install Allure globally:
+```sh
+npm install -g allure-commandline
+```
+
+## Contributing
+Feel free to contribute by submitting issues or pull requests. Follow the established coding guidelines and best practices.
+
+## Autho
+Md Asadul Haque
+
+Batch -08
+
+Github : https://github.com/asadulqa
+
+Linkedin profile :https://www.linkedin.com/in/md-asadul-haque-80b2072b3/
+
+Email : mdasadul.qa@gmail.com
