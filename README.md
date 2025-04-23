@@ -39,8 +39,10 @@ npm install
 
 ### Run Tests
 To run all tests:
-```  npx wdio run wdio.conf.js
-```
+```bash
+npx wdio run wdio.conf.js
+
 
 ### To generate Allure report:
+```bash
 allure generate allure-results --clean && allure open
